@@ -1,10 +1,14 @@
 body{
   font-family: "Montserrat";
+  background-image: url("bg4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .head{
   margin-top: 40px;
 }
 h4, h1{
+  color: white;
   text-align: center;
   margin: 0px auto;
   padding: 0px;
