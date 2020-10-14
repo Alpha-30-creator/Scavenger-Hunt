@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <title> Home</title>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width=device-width, initial-scale = 1.0, shrink-to-fit=no">
+  <link rel = "stylesheet" href = "static.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+    function check_ans(){
+      var right = document.querySelector("#right");
+      var answer = document.querySelector("#answer");
+      var wrong = document.querySelector("#wrong");
+      var next = document.querySelector(".next");
+      if (answer.value == "not sure" || answer.value == "not sure"){
+        right.style.display = "block";
+        next.style.display = "inline";
+        wrong.style.display = "none"
+      }
+      else{
+        wrong.style.display = "block"
+        right.style.display = "none";
+        next.style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body>
+  <p class="head">
+  <h4><i>LACAS Logistic Society Presents</i></h4>
+  <h1>Scavenger Hunt</h1>
+  <p style="text-align:center;font-size:16px;color:white;">Biological warfare. A virus has been released out into the world and
+     wreaked havoc, taking the lives of hundreds and thousands every passing day. The world is in despair, no one thought it would
+     go this far. Everyone is trying to mourn the loss of many, protect themselves and their families and adapt to this new normal,
+     all at the same time.<br>
+     Scientists, too, are making a constant undying effort of finding a cure, trying to keep hope alive amongst all. But finding
+    a cure has never been harder, and so, you, the world’s top doctors, have come together to rid the world of this menace.<br>
+    It isn’t an easy journey. But you are willing to go to any lengths for it.<br>Right?<br> So you put on your protective gear
+    and enter into the lab, spend day and night experimenting. Every second counts.
+  </p>
+  <form>
+    <input type="text" placeholder="Enter Answer" id="answer" autocomplete="off">
+  </form>
+  <div style="text-align:right;margin: 10px 0px;">
+    <button id="check" onclick="check_ans()"> Check</button>
+  </div>
+  <div class="response" id="wrong" style="text-align:center;color:red;"> Wrong. Try Again. </div>
+  <div class="response" id="right"> Well Done! Click the button to find the next clue</div>
+  <div style="text-align:center;margin-top:20px;" id="Next">
+    <a class="next" href="3.html"> Next Clue<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  </div>
+</body>
+</html>
