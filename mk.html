@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <title> Home</title>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width=device-width, initial-scale = 1.0, shrink-to-fit=no">
+  <link rel = "stylesheet" href = "static.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+    function check_ans(){
+      var right = document.querySelector("#right");
+      var answer = document.querySelector("#answer");
+      var wrong = document.querySelector("#wrong");
+      var next = document.querySelector(".next");
+      if (answer.value == "lethal" || answer.value == "Lethal"){
+        next.style.display = "inline";
+        wrong.style.display = "none"
+      }
+      else{
+        wrong.style.display = "block"
+        next.style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body>
+  <p class="head">
+  <h4><i>LACAS Logistic Society Presents</i></h4>
+  <h1>Scavenger Hunt</h1>
+  <p style="text-align:center;font-size:16px;color:white;">You managed to go outside safely. It took some effort but you turned the
+   breakers back on. The power is back. The police are on their way. Let’s just hope nothing happened to that cure…<br>
+   You make your way to the laboratory. The cure is there and a little bit might be able to help your sickness. You just have
+   to inject it in and wait.
+ </p>
+  <form>
+    <input type="text" placeholder="Enter Answer" id="answer" autocomplete="off">
+  </form>
+  <div style="text-align:right;margin: 10px 0px;">
+    <button id="check" onclick="check_ans()"> Check</button>
+  </div>
+  <div class="response" id="wrong" style="text-align:center;color:red;"> Wrong. Try Again. </div>
+  <div style="text-align:center;margin-top:20px;" id="Next">
+    <a class="next" href="lethal.html" style="color:white;background-color:black;"> Next Clue<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  </div>
+</body>
+</html>

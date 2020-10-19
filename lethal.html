@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <title> Home</title>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width=device-width, initial-scale = 1.0, shrink-to-fit=no">
+  <link rel = "stylesheet" href = "static.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script>
+    function check_ans(){
+      var right = document.querySelector("#right");
+      var answer = document.querySelector("#answer");
+      var wrong = document.querySelector("#wrong");
+      var next = document.querySelector(".next");
+      if (answer.value == "truth" || answer.value == "Truth"){
+        next.style.display = "inline";
+        wrong.style.display = "none"
+      }
+      else{
+        wrong.style.display = "block"
+        next.style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body>
+  <p class="head">
+  <h4><i>LACAS Logistic Society Presents</i></h4>
+  <h1>Scavenger Hunt</h1>
+  <p style="text-align:center;font-size:14px;color:white;">That wasn't the damn cure!<br>The sick’s eyes went red and face paled,
+   purple spots appearing where the liquid was injected.<br>It's been replaced. You need to find the correct one! The clock is
+   ticking. It won't take long for the lethal liquid to kill your friend.<br>
+   The voice of a man resounds in the lab. He laughs at your frustration, the clock ticks. He only recites one riddle.<br>
+
+<pre style="text-align:center;font-size:16px;color:black;"><mark>"Despised am I by knave and liar,
+After me, the wise inquire.
+I rise above all death and fire.
+What am I?"</mark></pre>
+</p>
+  <form>
+    <input type="text" placeholder="Enter Answer" id="answer" autocomplete="off">
+  </form>
+  <div style="text-align:right;margin: 10px 0px;">
+    <button id="check" onclick="check_ans()"> Check</button>
+  </div>
+  <div class="response" id="wrong" style="text-align:center;color:red;"> Wrong. Try Again. </div>
+  <div style="text-align:center;margin-top:20px;" id="Next">
+    <a class="next" href="truth.html" style="color:white;background-color:black;"> Next Clue<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  </div>
+</body>
+</html>
