@@ -7,33 +7,14 @@
   <link rel = "stylesheet" href = "static.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script>
-    function check_ans(){
-      var right = document.querySelector("#right");
-      var answer = document.querySelector("#answer");
-      var wrong = document.querySelector("#wrong");
-      var next = document.querySelector(".next");
-      if (answer.value == "Pandemic" || answer.value == "pandemic"){
-        right.style.display = "block";
-        next.style.display = "inline";
-        wrong.style.display = "none"
-      }
-      else{
-        wrong.style.display = "block"
-        right.style.display = "none";
-        next.style.display = "none";
-      }
-    }
-  </script>
 </head>
 <body>
   <p class="head">
   <h4><i>LACAS Logistic Society Presents</i></h4>
   <h1>Scavenger Hunt</h1>
-  <p style="text-align:center;font-size:16px;color:white;">You managed to find the right cure and save your infected friend.
-    He was on the verge of collapse when the police finally arrived and he was taken to the doctor while the rest of the
-    investigation took place to find who had attempted to sabotage the lab.<br> You can finally breathe a sigh of relief.<br>
-    Congratulations!
+  <p style="text-align:center;font-size:16px;color:white;">(Cure Created)<br><br>You've finished the cure.
+    Saved your friend. The authorities have been called. But there's no trace of anyone in the building. 3310 is gone.<br><br>
+    You can finally breathe a sigh of relief.<br><br>Or can you, really?
   </p>
   <form style="display:none;">
     <input type="text" placeholder="Enter Answer" id="answer" autocomplete="off">
